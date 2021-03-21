@@ -4,7 +4,7 @@ public class ComputerPlay {
 	public static void main(String[] args) {
 		
 		boolean enablePrint = true;
-		int numGames = 2;
+		int numGames = 2000;
 		
 		int guess=0;
 		int guessCounter;
