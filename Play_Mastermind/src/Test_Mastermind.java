@@ -18,13 +18,15 @@ public class Test_Mastermind {
 		*/
 		
 		Mastermind mm = new Mastermind();
-		mm.printSolution();
+		//mm.printSolution();
 		
-		//int[] a = mm.numberToArray(6013); //guess
-		//int[] g = mm.numberToArray(659); //solution
-		//int[] s = new int[2];
-		//s = mm.calculateScore(a, g);
-		//System.out.println("Score: "+s[0]+"."+s[1]);
+		int[] g = mm.numberToArray(6973); //solution
+		int[] a = mm.numberToArray(5376); //guess
+		System.out.println("g"+Arrays.toString(g));
+		System.out.println("a"+Arrays.toString(a));
+		double s = 0;
+		s = mm.calculateScore(a, g);
+		System.out.println("Score: " + s);
 	}//main
 	
 }//class Test_Mastermind

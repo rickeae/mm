@@ -4,7 +4,7 @@ public class ComputerPlay {
 	public static void main(String[] args) {
 		
 		boolean enablePrint = true;
-		int numGames = 2000;
+		int numGames = 10000;
 		
 		int guess=0;
 		int guessCounter;
@@ -35,8 +35,7 @@ public class ComputerPlay {
 					break;
 				}//if
 				a = mm.numberToArray(mm.answer);
-				s = mm.calculateScore(mm.g, a);
-				score = (s[0] * 10.0 + s[1]) / 10.0;
+				score = mm.calculateScore(mm.g, a);
 				if (enablePrint) System.out.print("Score "+guessCounter+": " + score);
 				mm.eval(score);
 				if (enablePrint) System.out.println("         You scored " + mm.correctPosition + " digit(s) in the correct position, and " + mm.wrongPosition + " in the wrong position\n");

@@ -26,8 +26,9 @@ public class Play_Mastermind {
 				break;
 			}//if
 			if (mm.doesSolutionExist() == false) {
-				System.out.println("Hmmm, seems you may have made a mistake.");
-				break;
+				//doesSolutionExist seems to have a problem
+				//System.out.println("Hmmm, seems you may have made a mistake.");
+				//break;
 			}//if
 			
 			/*
@@ -37,8 +38,8 @@ public class Play_Mastermind {
 			score = 5.0; //sentinel must not be between 0 and 4 inclusive
 			while ((score > 4) || (score < 0)) {
 				a = mm.numberToArray(mm.answer);
-				s = mm.calculateScore(mm.g, a);
-				System.out.print("Score "+guessCounter+" ("+s[0]+"."+s[1]+"): ");
+				score = mm.calculateScore(mm.g, a);
+				System.out.print("Score "+guessCounter+" ("+score+"): ");
 				score = console.nextDouble();
 				if (score == -1) {
 					mm.printSolution();
